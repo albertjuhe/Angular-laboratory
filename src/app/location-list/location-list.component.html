@@ -1,5 +1,17 @@
-<ul>
-  <li *ngFor="let location of names">
-      <app-location-item [name]="location"></app-location-item>
-  </li>
-</ul>
+<table border="1" class="table table-striped">
+  <thead>
+  <tr>
+      <th>Destination</th>
+      <th>Dates</th>
+      <th>Valoration</th>
+      <th>Visualizations</th>
+      <th>Forked</th>
+      <th>Traveler</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let travel of locations">
+      <app-location-item [location]="travel"></app-location-item> 
+    </tr>      
+  </tbody>
+</table>

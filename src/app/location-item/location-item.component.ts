@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '../location/location.model';
 
 @Component({
   selector: 'app-location-item',
@@ -6,12 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./location-item.component.css']
 })
 export class LocationItemComponent implements OnInit {
-
-  @Input() name: string; // <!-- Location Name -->
-  description: string; // <!-- Location description -->
+  @Input() location: Location;
 
   constructor() {
-   }
+  }
 
   ngOnInit() {
   }
