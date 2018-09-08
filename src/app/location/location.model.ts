@@ -7,6 +7,7 @@ export class Location {
     watch: Number;
     forks: Number;
     user: String;
+    url: String = 'http://35.167.24.186/travelexperience/web/app.php/';
 
     constructor(name: String,
         description: String,
