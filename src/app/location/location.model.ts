@@ -1,22 +1,22 @@
 export class Location {
-    name: String;
-    description: String;
-    dateFrom: String;
-    detoTo: String;
-    starts: Number;
-    watch: Number;
-    forks: Number;
-    user: String;
+    name: string;
+    description: string;
+    dateFrom: string;
+    detoTo: string;
+    starts: number;
+    watch: number;
+    forks: number;
+    user: string;
     url: String = 'http://35.167.24.186/travelexperience/web/app.php/';
 
-    constructor(name: String,
-        description: String,
-        dateFrom: String,
-        detoTo: String,
-        starts: Number,
-        watch: Number,
-        forks: Number,
-        user: String) {
+    constructor(name: string,
+        description: string,
+        dateFrom: string,
+        detoTo: string,
+        starts: number,
+        watch: number,
+        forks: number,
+        user: string) {
 
         this.name = name;
         this.description = description;

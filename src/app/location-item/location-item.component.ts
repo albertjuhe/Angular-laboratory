@@ -12,6 +12,11 @@ export class LocationItemComponent implements OnInit {
   constructor() {
   }
 
+  addWatch(): boolean {
+    console.log('Add watch');
+    return false;
+  }
+
   ngOnInit() {
   }
 
