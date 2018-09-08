@@ -10,7 +10,7 @@
   </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let travel of locations">
+    <tr *ngFor="let travel of sortedTravels()">
       <app-location-item [location]="travel"></app-location-item> 
     </tr>      
   </tbody>

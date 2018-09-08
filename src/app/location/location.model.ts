@@ -36,4 +36,15 @@ export class Location {
     incStar() {
         this.stars += 1;
     }
+
+    domain(): string {
+        try {
+            // e.g. http://foo.com/path/to/bar
+            const domainAndPath: string = this.url.split('//')[1];
+            // e.g. foo.com/path/to/bar
+            return domainAndPath.split('/')[0];
+        } catch (err) {
+            return null;
+        }
+    }
 }
