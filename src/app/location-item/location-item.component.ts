@@ -12,8 +12,9 @@ export class LocationItemComponent implements OnInit {
   constructor() {
   }
 
-  addWatch(): boolean {
-    console.log('Add watch');
+  addStar(): boolean {
+    this.location.incStar();
+    console.log('Add Star');
     return false;
   }
 

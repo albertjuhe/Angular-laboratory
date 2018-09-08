@@ -3,7 +3,7 @@ export class Location {
     description: string;
     dateFrom: string;
     detoTo: string;
-    starts: number;
+    stars: number;
     watch: number;
     forks: number;
     user: string;
@@ -13,7 +13,7 @@ export class Location {
         description: string,
         dateFrom: string,
         detoTo: string,
-        starts: number,
+        stars: number,
         watch: number,
         forks: number,
         user: string) {
@@ -22,10 +22,18 @@ export class Location {
         this.description = description;
         this.dateFrom = dateFrom;
         this.detoTo = detoTo;
-        this.starts = starts;
+        this.stars = stars;
         this.watch = watch;
         this.forks = forks;
         this.user = user;
 
+    }
+
+    incWatch() {
+        this.watch += 1;
+    }
+
+    incStar() {
+        this.stars += 1;
     }
 }

@@ -1,8 +1,8 @@
 
-  <td><a herf (click)="addWatch()"><i  class="fa fa-area-chart"></i></a> <a href="{{location.url}}">{{location.name}}</a><br>{{location.description}}</td>
+  <td><a href="{{location.url}}"><i  class="fa fa-suitcase"></i>{{location.name}}</a><br>{{location.description}}</td>
   <td>{{location.dateFrom}} to {{location.dateFrom}}</td>
-  <td>{{location.starts}}</td>
-  <td>{{location.watch}}</td>
-  <td>{{location.forks}} </td>
+  <td><a herf (click)="addStar()"><i  class="fa fa-star"></i></a>{{location.stars}}</td>
+  <td><i  class="fa fa-eye"></i>{{location.watch}}</td>
+  <td><i  class="fa fa-code-fork"></i>{{location.forks}} </td>
   <td>{{location.user}}</td>
 
