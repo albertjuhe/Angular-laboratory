@@ -10,7 +10,7 @@
             </h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
                 commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            <app-location-list></app-location-list>
+            <app-location-list [locationsList]="locations" (onLocationSelected)="locationWasSelected($event)"></app-location-list>
         </div>
     </div>
 </div>

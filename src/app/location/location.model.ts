@@ -47,4 +47,10 @@ export class Location {
             return null;
         }
     }
+
+    equal(location: Location) {
+        return (
+            this.name === location.name
+        )
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input, EventEmitter, Output } from '@angular/core';
 import { Location } from '../location/location.model';
 
 @Component({
@@ -8,21 +8,32 @@ import { Location } from '../location/location.model';
 })
 export class LocationListComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
-  locations: Array<Location>;
+  @Input() locationsList: Array<Location>;
+  @Output() onLocationSelected: EventEmitter<Location>;
+
+  currentLocation: Location;
 
   constructor() {
-    this.locations = [
-      new Location('Roth, Alemanya', 'Challenge Roth', '07/15/2016', '07/18/2016', 5, 91, 0, 'ajuhe'),
-      new Location('Toscana, Italia', 'Viatge Toscana', '07/15/2015', '07/18/2015', 4, 12, 0, 'eva'),
-      new Location('EDinborough, Escocia', 'Volta HighLands', '03/15/2012', '03/10/2012', 6, 15, 0, 'aina')
-    ];
-   }
+    this.onLocationSelected = new EventEmitter();
+  }
 
-   sortedTravels(): Location[] {
-    return this.locations.sort((a: Location, b: Location) => b.stars - a.stars);
-    }
+  sortedTravels(): Location[] {
+    return this.locationsList.sort((a: Location, b: Location) => b.stars - a.stars);
+  }
 
   ngOnInit() {
+  }
+
+  clicked(location: Location) {
+    this.currentLocation = location;
+    this.onLocationSelected.emit(location);
+  }
+
+  isSelected(location: Location) {
+    if (!location || !this.currentLocation) {
+      return false;
+    }
+    return this.currentLocation.equal(location);
   }
 
 }

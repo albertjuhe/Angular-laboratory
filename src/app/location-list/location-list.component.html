@@ -7,11 +7,16 @@
       <th>Visualizations</th>
       <th>Forked</th>
       <th>Traveler</th>
+      <th>Budget</th>
   </tr>
   </thead>
   <tbody>
     <tr *ngFor="let travel of sortedTravels()">
-      <app-location-item [location]="travel"></app-location-item> 
+      <app-location-item 
+      [location]="travel" 
+      (click)="clicked(travel)"
+      [class.selected]="isSelected(travel)"
+      ></app-location-item> 
     </tr>      
   </tbody>
 </table>

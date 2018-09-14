@@ -2,3 +2,7 @@
 .fa {
     margin-right: 5px;
 }
+
+.selected {
+    background-color: cadetblue;
+}
