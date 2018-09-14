@@ -8,6 +8,8 @@ export class Location {
     forks: number;
     user: string;
     url: String = 'http://35.167.24.186/travelexperience/web/app.php/';
+    breadcrum: String;
+    budget: number = 0;
 
     constructor(name: string,
         description: string,
@@ -16,7 +18,8 @@ export class Location {
         stars: number,
         watch: number,
         forks: number,
-        user: string) {
+        user: string,
+        breadcrum: string) {
 
         this.name = name;
         this.description = description;
@@ -26,6 +29,7 @@ export class Location {
         this.watch = watch;
         this.forks = forks;
         this.user = user;
+        this.breadcrum = breadcrum;
 
     }
 

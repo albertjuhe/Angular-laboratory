@@ -13,9 +13,9 @@ export class AppComponent {
 
   constructor() {
     this.locations = [
-      new Location('Roth, Alemanya', 'Challenge Roth', '07/15/2016', '07/18/2016', 5, 91, 0, 'ajuhe'),
-      new Location('Toscana, Italia', 'Viatge Toscana', '07/15/2015', '07/18/2015', 4, 12, 0, 'eva'),
-      new Location('EDinborough, Escocia', 'Volta HighLands', '03/15/2012', '03/10/2012', 6, 15, 0, 'aina')
+      new Location('Roth', 'Challenge Roth', '07/15/2016', '07/18/2016', 5, 91, 0, 'ajuhe','Europa > Alemanya > Baviera > Roth'),
+      new Location('Toscana', 'Viatge Toscana', '07/15/2015', '07/18/2015', 4, 12, 0, 'eva','Europa > Italia > Toscana > Siena'),
+      new Location('Glasgow', 'Volta HighLands', '03/15/2012', '03/10/2012', 6, 15, 0, 'aina','Europa > Escocia > Sky Island')
     ];
   }
 
